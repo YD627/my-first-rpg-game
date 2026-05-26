@@ -73,3 +73,9 @@ switch (hit.collider.tag)
 }
 ```
 
+## 2026-05-26
+完成[11]:创建了可拾取物品类PickAbleObject和NPC类NPCObject，均继承自InteractableObject。
+
+完成[12]:优化了玩家与可交互物的交互实机，只有当玩家停下移动时，才会调用交互方法。
+
+完成[13]:通过Font Asset Creator创建了自定义字体，让游戏文本支持中文。
