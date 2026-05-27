@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        // 检测鼠标左键点击，并且确保点击不是在UI元素上
+        if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject() == false) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             // 检查射线是否与任何物体碰撞

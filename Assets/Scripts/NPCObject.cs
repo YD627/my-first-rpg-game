@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class NPCObject : InteractableObject
 {
+    public string npcName;
+    public string[] contentList;
     protected override void Interact()
     {
-        print("Interact with" + gameObject.name);
+        DialogueUI.Instance.Show(name, contentList);
     }
 }
