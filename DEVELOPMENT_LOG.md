@@ -96,3 +96,32 @@ switch (hit.collider.tag)
     3. 滥用风险：不是所有情况都适合用单例
 
 完成[16]:为玩家添加了第一把武器Scythe，并为镰刀添加了闲置动画WeaponScythe_Idle。该动画是用unity自带的Animation组件实现的。
+
+## 2026-05-28
+完成[17]:为镰刀武器添加了攻击动画WeaponScythe_Attack。
+- 该动画是用unity自带的Animation组件实现的。
+- 动画的播放是在PlayerMove中的OnClick函数中调用的。
+
+完成[18]:创建了武器类Weapon，用于管理武器的属性和行为。
+- 包含武器的伤害值和攻击方法。
+- 目前实现了播放武器攻击动画的功能。
+
+完成[19]:创建了镰刀和标枪两个武器子类，均继承自Weapon类。
+- 镰刀类中实现了攻击方法，用于播放镰刀的攻击动画。并添加了OnTriggerEnter方法，用于检测是否攻击到了敌人。此外在镰刀的MeshCollider中要开启IsTrigger属性。还要给镰刀添加Rigidbody组件(关闭重力，开启Kinematic属性)。
+
+完成[20]:创建PlayerAttack类，用于管理玩家的攻击行为。
+- 包含一个Weapon对象，用于存储当前使用的武器。
+- 点击空格时会检测是否有武器，如果有则调用武器的攻击方法。
+
+完成[21]:创建了标枪Javelin的预制体并通过Instantiate方法实例化。
+- 通过一个空物体作为标枪的父类用于管理标枪的位置和旋转。同时给这个父类挂载标枪类，在标枪类中实现实例化生成并发射标枪的代码
+```C#
+public GameObject bulletPrefab; // 标枪的子弹预制体
+public float bulletSpeed;
+public override void Attack()
+{
+    // 实例化标枪的子弹
+    GameObject bulletGo = GameObject.Instantiate(bulletPrefab, transform.position, transform.rotation); 
+    bulletGo.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+}
+```
