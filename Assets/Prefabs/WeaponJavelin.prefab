@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302284658073432338}
   m_Layer: 0
-  m_Name: JavelinWeapon
+  m_Name: WeaponJavelin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -27,12 +27,12 @@ public class PlayerMove : MonoBehaviour
                 // 根据碰撞物体的标签执行不同的操作
                 switch (hit.collider.tag)
                 {
-                    case "Ground":
+                    case Tag.Ground:
                         // 如果碰撞了地面，设置玩家的目标位置为碰撞点
                         playerAgent.stoppingDistance = 0f; // 设置停止距离为0，确保玩家直接移动到目标位置
                         playerAgent.SetDestination(hit.point);
                         break;
-                    case "Interactable":
+                    case Tag.Interactable:
                         // 如果碰撞了可交互物体，调用该物体的交互方法
                         hit.collider.GetComponent<InteractableObject>().OnClick(playerAgent);
                         break;

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 9181600685356404851}
   - component: {fileID: 2479149201216342632}
   - component: {fileID: 1779166781751632111}
-  - component: {fileID: 7578366327467729282}
   - component: {fileID: 936259005788625843}
+  - component: {fileID: 2052278861018625486}
+  - component: {fileID: -8730414455229248514}
   m_Layer: 0
   m_Name: JavelinBullet
   m_TagString: Untagged
@@ -87,28 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7578366327467729282
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5230444652178302032}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a0a946fa63446374fb83741b8f9a9ef7, type: 3}
 --- !u!54 &936259005788625843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -136,3 +115,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!136 &2052278861018625486
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5230444652178302032}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.06
+  m_Height: 2.09
+  m_Direction: 2
+  m_Center: {x: -0.00000020861626, y: -0.025809791, z: -0.71793467}
+--- !u!114 &-8730414455229248514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5230444652178302032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0269c0d3e51cb9f4eb6d11a0fcb391f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

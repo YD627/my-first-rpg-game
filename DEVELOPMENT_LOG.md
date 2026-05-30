@@ -125,3 +125,22 @@ public override void Attack()
     bulletGo.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
 }
 ```
+
+## 2026-05-30
+完成[22]:实现了一个名为ItemScriptObject的脚本，用于管理物品的属性和行为。
+包含：
+- 物品ID
+- 物品名字
+- 物品类型(武器、消耗品)
+- 物品描述
+- 物品属性列表(Hp, Energy, MentalValue, Speed, Attack)
+- 物品图标
+- 物品预制体
+
+完成[23]:创建了一个ItemDBSO的脚本，用于管理物品数据库。
+- 包含一个ItemScriptObject数组，用于存储所有物品的属性和行为。
+
+完成[24]:创建了一个Tag类，用于管理物品的标签。
+- 常量定义Tag标签的字符串，方便别的脚本中使用。
+
+完成[25]:通过截图创建了物品的图标。

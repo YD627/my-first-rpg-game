@@ -11,7 +11,8 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        // 获取玩家位置，并计算摄像机与玩家之间的初始偏移量
+        playerTransform = GameObject.FindGameObjectWithTag(Tag.Player).transform;
         offset = transform.position - playerTransform.position;
     }
 
